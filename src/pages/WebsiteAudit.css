@@ -1,0 +1,368 @@
+
+.website-audit-page {
+    min-height: 85vh;
+    padding: 55px 20px;
+    background: #f8f9fd;
+    font-family: Inter, Arial, sans-serif;
+    color: #172033;
+}
+
+.audit-container {
+    max-width: 850px;
+    margin: auto;
+}
+
+.audit-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.audit-tag,
+.progress-tag {
+    color: #6655c5;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.audit-heading h1 {
+    font-size: 34px;
+    margin: 13px 0;
+}
+
+.audit-heading p {
+    color: #788197;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* Input card */
+
+.audit-input-card {
+    padding: 28px;
+    border: 1px solid #e9eaf2;
+    border-radius: 16px;
+    background: white;
+    box-shadow: 0 8px 30px #1c285008;
+}
+
+.audit-input-card label {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.audit-input-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 7px;
+    border: 1px solid #dedfea;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+.audit-input-wrapper:focus-within {
+    border-color: #7161d6;
+    box-shadow: 0 0 0 3px #7161d61a;
+}
+
+.url-icon {
+    padding-left: 10px;
+    color: #7161d6;
+    font-size: 20px;
+}
+
+.audit-input-wrapper input {
+    flex: 1;
+    min-width: 0;
+    border: none;
+    outline: none;
+    padding: 12px 0;
+    font-size: 13px;
+    background: transparent;
+    color: #172033;
+}
+
+.audit-input-wrapper button {
+    padding: 13px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #5947b8;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.audit-input-wrapper button:hover:not(:disabled) {
+    background: #40328f;
+}
+
+.audit-input-wrapper button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.audit-input-card small {
+    display: block;
+    margin-top: 12px;
+    color: #8a91a2;
+    font-size: 11px;
+}
+
+/* Progress card */
+
+.audit-progress-card {
+    margin-top: 28px;
+    padding: 30px;
+    background: white;
+    border: 1px solid #e9eaf2;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px #1c285008;
+}
+
+.progress-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.progress-header h2 {
+    margin: 10px 0;
+    font-size: 21px;
+}
+
+.progress-header p {
+    color: #858da0;
+    font-size: 12px;
+}
+
+.progress-percentage {
+    font-size: 27px;
+    font-weight: 800;
+    color: #6252bd;
+}
+
+.progress-track {
+    width: 100%;
+    height: 7px;
+    margin: 22px 0;
+    overflow: hidden;
+    border-radius: 20px;
+    background: #eeedf7;
+}
+
+.progress-fill {
+    height: 100%;
+    border-radius: 20px;
+    background: linear-gradient(90deg, #6554c5, #a18df5);
+    transition: width 0.5s ease;
+}
+
+/* Steps */
+
+.audit-steps {
+    display: flex;
+    flex-direction: column;
+}
+
+.audit-step {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 16px 0;
+    border-bottom: 1px solid #f0f0f5;
+}
+
+.step-icon {
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: #f0f0f5;
+    color: #9298a8;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.step-content {
+    flex: 1;
+}
+
+.step-content h4 {
+    margin: 0 0 5px;
+    font-size: 13px;
+    color: #7b8293;
+}
+
+.step-content p {
+    margin: 0;
+    font-size: 11px;
+    color: #a0a5b1;
+}
+
+.step-status {
+    font-size: 11px;
+    color: #a0a5b1;
+}
+
+/* Active step */
+
+.audit-step.active .step-icon {
+    background: #eeebff;
+}
+
+.audit-step.active h4 {
+    color: #5544ae;
+}
+
+.audit-step.active .step-status {
+    color: #6554c5;
+    font-weight: 700;
+}
+
+/* Completed step */
+
+.audit-step.completed .step-icon {
+    background: #e3f8ed;
+    color: #15965d;
+}
+
+.audit-step.completed h4 {
+    color: #253b31;
+}
+
+.audit-step.completed .step-status {
+    color: #15965d;
+    font-weight: 700;
+}
+
+/* Spinner */
+
+.step-spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #d8d0ff;
+    border-top-color: #6554c5;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Note */
+
+.progress-note {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-top: 22px;
+    color: #858da0;
+    font-size: 12px;
+}
+
+.pulse-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #6655c5;
+    animation: pulse 1.2s infinite;
+}
+
+@keyframes pulse {
+    50% {
+        opacity: 0.3;
+        transform: scale(0.7);
+    }
+}
+
+/* Error */
+
+.audit-error {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+    padding: 22px;
+    border: 1px solid #fecaca;
+    border-radius: 12px;
+    background: #fff5f5;
+}
+
+.error-icon {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #fee2e2;
+    color: #dc2626;
+    font-weight: 800;
+}
+
+.audit-error h3 {
+    margin: 3px 0 8px;
+    color: #b91c1c;
+    font-size: 15px;
+}
+
+.audit-error p {
+    color: #7f3030;
+    font-size: 12px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.audit-error button {
+    margin-top: 8px;
+    padding: 9px 15px;
+    border: none;
+    border-radius: 7px;
+    background: #dc2626;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .website-audit-page {
+        padding: 35px 15px;
+    }
+
+    .audit-heading h1 {
+        font-size: 27px;
+    }
+
+    .audit-input-card,
+    .audit-progress-card {
+        padding: 20px;
+    }
+
+    .audit-input-wrapper {
+        flex-wrap: wrap;
+    }
+
+    .audit-input-wrapper input {
+        flex: 1;
+    }
+
+    .audit-input-wrapper button {
+        width: 100%;
+    }
+
+    .step-status {
+        font-size: 9px;
+    }
+
+    .step-content p {
+        line-height: 1.5;
+    }
+}
